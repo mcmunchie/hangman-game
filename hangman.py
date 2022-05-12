@@ -14,7 +14,7 @@ def load_words():
     Returns a list of valid words. Words are strings of lowercase letters.
     Depending on the size of the word list, this function may take a while to finish.
     '''
-    print("Loading word list from file...")
+    print("\nLoading word list from file...")
     word_file = open(WORDLIST_FILENAME, 'r')
     line = word_file.readline()
     word_file.close()
@@ -99,9 +99,9 @@ def invalid_guess(warnings_remaining, guesses_remaining):
     Call this function when the user enters a letter already guessed or
     a symbol that is not a letter.
 
-    The function supports Game Rules #2 and #3:
-      2. If the user has one or more warning left, the user should lose one warning.
-      3. If the user has no remaining warnings, they should lose one guess.
+    The function supports the following game rules:
+      1. If the user has one or more warning left, the user should lose one warning.
+      2. If the user has no remaining warnings, they should lose one guess.
 
     This function returns new values for warnings and guesses remaining.
     warnings_remaining: int, the warnings remainin before the invalid guess
@@ -121,9 +121,9 @@ def incorrect_guess(guessed_letter, guesses_remaining):
     Call this function when the user makes a guess that is valid, but it doesn't
     match a letter in the secret word.
 
-    The function supports Game Rules #5 and #6:
-      5. Consonants: if user inputs a consonant that hasn't been guessed and the consonant is not in the secret word, the user loses one guess.
-      6. Vowels: if the vowel hasn't been guessed and the vowel is not in the secret word, the user loses two guesses.
+    The function supports the following game rules:
+      3. Consonants: if user inputs a consonant that hasn't been guessed and the consonant is not in the secret word, the user loses one guess.
+      4. Vowels: if the vowel hasn't been guessed and the vowel is not in the secret word, the user loses two guesses.
 
     This function returns a new value for the number of guesses remaining.
     guessed_letter: string, the letter guessed by the player
@@ -213,12 +213,12 @@ def main():
     Starts up an interactive game of Hangman.
 
     * At the start of the game, let the user know how many
-      letters the secret_word contains and how many guesses s/he starts with.
+      letters the secret_word contains and how many guesses they start with.
 
     * The user should start with 6 guesses
 
     * Before each round, you should display to the user how many guesses
-      s/he has left and the letters that the user has not yet guessed.
+      they have left and the letters that the user has not yet guessed.
 
     * Ask the user to supply one guess per round. Remember to make
       sure that the user puts in a letter!
@@ -228,8 +228,6 @@ def main():
 
     * After each guess, you should display to the user the
       partially guessed word so far.
-
-    Follow the other limitations detailed in the problem write-up.
     '''
     # load the words into a list
     wordlist = load_words()
@@ -287,6 +285,7 @@ def main():
 
     score = calculate_score(guesses_remaining, secret_word)
     display_game_outcome(score, secret_word)
+    print()
     
 if __name__ == "__main__":
     main()
