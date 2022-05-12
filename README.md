@@ -5,7 +5,7 @@
 ## Table of Contents
 + [Purpose](https://github.com/mcmunchie/hangman-game#purpose)
 + [Basic Hangman](https://github.com/mcmunchie/hangman-game#basic-hangman)
-+ [Game Rules & Requirements](https://github.com/mcmunchie/hangman-game#game-rules-&-requirements)
++ [Game Rules & Requirements](https://github.com/mcmunchie/hangman-game#game-rules--requirements)
 + [Example Output](https://github.com/mcmunchie/hangman-game#example-output)
 
 ## Purpose
