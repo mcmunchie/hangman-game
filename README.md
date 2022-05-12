@@ -44,7 +44,14 @@ This Python program is a version of the classic word game Hangman. More informat
     ```
 
 ## Example Output
+> Lose game
 <img src=img\lose-hangman.png />
+
+> Win game (part one)
 <img src=img\win-hangman-1.png />
+
+> Win game (part two)
 <img src=img\win-hangman-2.png />
+
+> Unit tests
 <img src=img\test-hangman.png />
