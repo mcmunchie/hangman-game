@@ -14,7 +14,7 @@ def load_words():
     Returns a list of valid words. Words are strings of lowercase letters.
     Depending on the size of the word list, this function may take a while to finish.
     '''
-    print("Loading word list from file...")
+    print("\nLoading word list from file...")
     word_file = open(WORDLIST_FILENAME, 'r')
     line = word_file.readline()
     word_file.close()
@@ -285,6 +285,7 @@ def main():
 
     score = calculate_score(guesses_remaining, secret_word)
     display_game_outcome(score, secret_word)
+    print()
     
 if __name__ == "__main__":
     main()
